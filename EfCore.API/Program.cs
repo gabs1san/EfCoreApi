@@ -1,3 +1,5 @@
+using EfCore.API.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 #region ConfigureService()
@@ -7,6 +9,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 #endregion
 var app = builder.Build();
 
