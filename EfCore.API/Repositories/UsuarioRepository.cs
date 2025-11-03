@@ -11,7 +11,7 @@ namespace EfCore.API.Repositories
         }
         public Usuario Get(int id)
         {
-           return _db.Find(x => x.Id == id)!;
+           return _db.Find(x => x.Id == id);
         }
         public void Add(Usuario usuario)
         {
@@ -29,9 +29,6 @@ namespace EfCore.API.Repositories
             _db.Remove(Get(id));
         }
 
-        public Usuario GetUsuario()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

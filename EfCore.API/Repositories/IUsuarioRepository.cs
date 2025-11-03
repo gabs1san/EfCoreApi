@@ -6,7 +6,7 @@ namespace EfCore.API.Repositories
     {
         List<Usuario> Get();
 
-        Usuario GetUsuario();
+        Usuario Get(int id);
 
         void Add(Usuario usuario);
 
