@@ -24,7 +24,7 @@ namespace EfCore.API.Controllers
             return Ok(ListaUsuarios);
         }
 
-        [HttpGet("{Id}")]
+        [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
            var usuario =  _repository.Get(id);
@@ -43,14 +43,14 @@ namespace EfCore.API.Controllers
             return Ok(usuario);
         }
 
-        [HttpPut("{Id}")]
+        [HttpPut("{id}")]
         public IActionResult Update([FromBody] Usuario usuario, int id)
         {
             _repository.Update(usuario);
             return Ok(usuario);
         }
 
-        [HttpDelete("{Id}")]
+        [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             _repository.Delete(id);
