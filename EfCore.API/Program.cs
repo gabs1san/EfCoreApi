@@ -1,3 +1,4 @@
+global using eCommerce.Models;
 using EfCore.API.Database;
 using EfCore.API.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -15,7 +16,7 @@ builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 builder.Services.AddDbContext<EfCoreContext>(
         options => options.UseSqlServer(builder.Configuration.GetConnectionString("EfCore")
-    );
+    ));
 #endregion
 var app = builder.Build();
 

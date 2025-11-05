@@ -8,5 +8,12 @@ namespace EfCore.API.Database
         {
 
         }
+
+        public DbSet<Usuario> Usuarios { get; set; }
+
+        public DbSet<Contato> Contatos { get; set; }
+
+        public DbSet<EnderecoEntrega> EndrecosEntrega { get; set; }
+        public DbSet<Departamento> Departamentos { get; set; }
     }
 }
