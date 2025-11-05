@@ -1,4 +1,6 @@
+using EfCore.API.Database;
 using EfCore.API.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+
+builder.Services.AddDbContext<EfCoreContext>(
+        options => options.UseSqlServer(builder.Configuration.GetConnectionString("EfCore")
+    );
 #endregion
 var app = builder.Build();
 
