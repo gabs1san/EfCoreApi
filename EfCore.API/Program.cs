@@ -15,7 +15,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 builder.Services.AddDbContext<EfCoreContext>(
-        options => options.UseSqlServer(builder.Configuration.GetConnectionString("EfCore")
+        options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 #endregion
 var app = builder.Build();
