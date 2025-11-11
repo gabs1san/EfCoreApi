@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfCore.API", "EfCore.API\Ef
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eCommerce.Models", "eCommerce.Models\eCommerce.Models.csproj", "{9E57A75E-6803-4563-81B3-FD32C0CD5FC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.Models.DataAnnotations", "eCommerce.Models.DataAnnotations\eCommerce.Models.DataAnnotations.csproj", "{413B5324-D730-48C4-A88D-3FFBE1803A77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9E57A75E-6803-4563-81B3-FD32C0CD5FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E57A75E-6803-4563-81B3-FD32C0CD5FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E57A75E-6803-4563-81B3-FD32C0CD5FC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{413B5324-D730-48C4-A88D-3FFBE1803A77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{413B5324-D730-48C4-A88D-3FFBE1803A77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{413B5324-D730-48C4-A88D-3FFBE1803A77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{413B5324-D730-48C4-A88D-3FFBE1803A77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
