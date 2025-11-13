@@ -27,6 +27,16 @@ namespace eCommerce.Models.FluentAPI
             modelBuilder.Entity<Usuario>().Property(a => a.RG).HasColumnName("REGISTRO_GERAL").HasMaxLength(10).IsRequired();
             modelBuilder.Entity<Usuario>().Ignore(a => a.Sexo);
             modelBuilder.Entity<Usuario>().Property(a => a.Id).ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<Usuario>().HasIndex(a => new { a.CPF, a.Email });
+            modelBuilder.Entity<Usuario>().HasIndex("Nome").IsUnique();
+
+            modelBuilder.Entity<Usuario>().HasKey(a => a.Id);
+
+
+            modelBuilder.Entity<Usuario>().HasOne(a => a.Contato).WithOne(a => a.Usuario).HasForeignKey<Contato>(a => a.UsuarioId);
+            modelBuilder.Entity<Usuario>().HasMany(usu => usu.EnderecosEntrega).WithOne(end => end.Usuario);
+            modelBuilder.Entity<Usuario>().HasMany(usu => usu.Departamentos).WithMany(dep => dep.Usuarios);
         }
     }
 }
